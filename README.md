@@ -260,11 +260,10 @@ Code is licensed under the [MIT License](LICENSE) — including the upstream cop
 
 The **sur9e name and logo are not covered by the MIT license.** They may not be used to name forks, imply endorsement, or suggest official affiliation — see [`TRADEMARK.md`](TRADEMARK.md).
 
-## About the author
+## About
 
-Sur9e is built and maintained by **Arsenii Peskovatskov** ([arspesk](https://github.com/arspesk)) — I built it for my own job hunt and made it free and open so yours goes better too. Bug reports, feature ideas, and PRs are all welcome (start with [an issue](https://github.com/apelabs-dev/sur9e/issues)); for anything else, reach out directly at **[hello@sur9e.com](mailto:hello@sur9e.com)**.
+Sur9e is built and maintained by **[apeLabs](https://github.com/apelabs-dev)**. It started as a tool for one real job hunt, and it's free and open so yours goes better too. Bug reports, feature ideas, and PRs are all welcome (start with [an issue](https://github.com/apelabs-dev/sur9e/issues)); for anything else, reach out directly at **[hello@sur9e.com](mailto:hello@sur9e.com)**.
 
-<a href="https://www.linkedin.com/in/arsenii-peskovatskov-757991217/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat"></a>
 <a href="mailto:hello@sur9e.com"><img alt="Email" src="https://img.shields.io/badge/hello@sur9e.com-EA4335?style=flat&logo=maildotru&logoColor=white"></a>
 
 ---
@@ -278,6 +277,6 @@ Sur9e is built and maintained by **Arsenii Peskovatskov** ([arspesk](https://git
   <img src="public/assets/sur9e-wordmark-black.svg" alt="sur9e" width="120">
 </picture>
 
-<sub>MIT licensed · Arsenii Peskovatskov · <a href="https://github.com/arspesk">@arspesk</a></sub>
+<sub>MIT licensed · <a href="https://github.com/apelabs-dev">apeLabs</a></sub>
 
 </div>
