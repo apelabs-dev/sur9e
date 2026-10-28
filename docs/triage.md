@@ -52,14 +52,14 @@ From this branch, a maintainer must:
 1. Review the plan with the default dry run:
 
    ```bash
-   npm run github:labels -- --repo arspesk/sur9e
+   npm run github:labels -- --repo apelabs-dev/sur9e
    ```
 
 2. After explicit approval, create or update the labels with this exact command
    (there is no second `--` before `--apply`):
 
    ```bash
-   npm run github:labels -- --repo arspesk/sur9e --apply
+   npm run github:labels -- --repo apelabs-dev/sur9e --apply
    ```
 
    The command creates or updates manifest labels only; it never deletes
@@ -68,7 +68,7 @@ From this branch, a maintainer must:
 3. Verify all 21 label names through GitHub CLI before merge:
 
    ```bash
-   gh label list --repo arspesk/sur9e --limit 100 --json name --jq '.[].name'
+   gh label list --repo apelabs-dev/sur9e --limit 100 --json name --jq '.[].name'
    ```
 
    Confirm the output includes every name in `.github/issue-labels.yml`.

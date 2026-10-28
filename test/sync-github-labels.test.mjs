@@ -17,9 +17,9 @@ const labels = Object.values(ISSUE_LABEL_GROUPS)
 
 describe('GitHub issue-label synchronization', () => {
   it('defaults to a dry run and accepts an explicit repository', () => {
-    expect(parseArgs(['--repo', 'arspesk/sur9e'])).toEqual({
+    expect(parseArgs(['--repo', 'apelabs-dev/sur9e'])).toEqual({
       apply: false,
-      repo: 'arspesk/sur9e',
+      repo: 'apelabs-dev/sur9e',
     });
   });
 
@@ -28,13 +28,13 @@ describe('GitHub issue-label synchronization', () => {
   });
 
   it.each([
-    ['https://github.com/arspesk/sur9e.git', 'arspesk/sur9e'],
-    ['git@github.com:arspesk/sur9e.git', 'arspesk/sur9e'],
-    ['ssh://git@github.com/arspesk/sur9e.git', 'arspesk/sur9e'],
-    ['https://notgithub.com/arspesk/sur9e.git', undefined],
-    ['https://github.com.evil.example/arspesk/sur9e.git', undefined],
-    ['git@github.com.evil.example:arspesk/sur9e.git', undefined],
-    ['ssh://git@github.com.evil.example/arspesk/sur9e.git', undefined],
+    ['https://github.com/apelabs-dev/sur9e.git', 'apelabs-dev/sur9e'],
+    ['git@github.com:apelabs-dev/sur9e.git', 'apelabs-dev/sur9e'],
+    ['ssh://git@github.com/apelabs-dev/sur9e.git', 'apelabs-dev/sur9e'],
+    ['https://notgithub.com/apelabs-dev/sur9e.git', undefined],
+    ['https://github.com.evil.example/apelabs-dev/sur9e.git', undefined],
+    ['git@github.com.evil.example:apelabs-dev/sur9e.git', undefined],
+    ['ssh://git@github.com.evil.example/apelabs-dev/sur9e.git', undefined],
   ])('parses only exact GitHub origins: %s', (origin, expected) => {
     expect(repoFromOrigin(origin)).toBe(expected);
   });
@@ -49,7 +49,7 @@ describe('GitHub issue-label synchronization', () => {
 
     await syncGithubLabels({
       labels,
-      repo: 'arspesk/sur9e',
+      repo: 'apelabs-dev/sur9e',
       execute: async (...args) => calls.push(args),
       log: line => lines.push(line),
     });
@@ -65,7 +65,7 @@ describe('GitHub issue-label synchronization', () => {
     await syncGithubLabels({
       apply: true,
       labels,
-      repo: 'arspesk/sur9e',
+      repo: 'apelabs-dev/sur9e',
       execute: async (...args) => calls.push(args),
       log: () => {},
     });
@@ -89,7 +89,7 @@ describe('GitHub issue-label synchronization', () => {
         syncGithubLabels({
           apply,
           labels: invalidLabels,
-          repo: 'arspesk/sur9e',
+          repo: 'apelabs-dev/sur9e',
           execute: async (...args) => calls.push(args),
           log: () => {},
         }),
@@ -109,7 +109,7 @@ describe('GitHub issue-label synchronization', () => {
         syncGithubLabels({
           apply,
           labels: invalidLabels,
-          repo: 'arspesk/sur9e',
+          repo: 'apelabs-dev/sur9e',
           execute: async (...args) => calls.push(args),
           log: () => {},
         }),
@@ -123,7 +123,7 @@ describe('GitHub issue-label synchronization', () => {
       syncGithubLabels({
         apply: true,
         labels,
-        repo: 'arspesk/sur9e',
+        repo: 'apelabs-dev/sur9e',
         execute: async () => {
           throw new Error('gh: command not found');
         },

@@ -35,7 +35,7 @@ const COMMIT_TIMEOUT_MS = 15 * 60_000;
 // repo. Maintainers / fork users can override with the UPDATE_REPO env var
 // (e.g. UPDATE_REPO=<owner>/<my-fork>); Settings (inputs/config/config.yml,
 // system.update_source) can still override both — see resolveUpdateRemote().
-const DEFAULT_REPO_SLUG = 'arspesk/sur9e';
+const DEFAULT_REPO_SLUG = 'apelabs-dev/sur9e';
 const envRepoSlug = (process.env.UPDATE_REPO || '').trim();
 if (envRepoSlug && !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(envRepoSlug)) {
   console.error(`[update] invalid UPDATE_REPO "${envRepoSlug}" — using ${DEFAULT_REPO_SLUG}`);

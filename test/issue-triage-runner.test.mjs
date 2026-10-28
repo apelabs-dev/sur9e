@@ -42,7 +42,7 @@ describe('live issue triage runner', () => {
 
     const result = await runIssueTriage({
       issueNumber: '42',
-      repo: 'arspesk/sur9e',
+      repo: 'apelabs-dev/sur9e',
       action: 'labeled',
       newestLabel: 'status:needs-info',
       bodyChanged: false,
@@ -52,7 +52,7 @@ describe('live issue triage runner', () => {
     expect(result).toEqual({ add: [], remove: [] });
     expect(state.labels).toEqual(['type:bug', 'status:needs-triage', 'good first issue']);
     expect(state.calls).toEqual([
-      ['gh', ['issue', 'view', '42', '--repo', 'arspesk/sur9e', '--json', 'labels']],
+      ['gh', ['issue', 'view', '42', '--repo', 'apelabs-dev/sur9e', '--json', 'labels']],
     ]);
   });
 
@@ -63,7 +63,7 @@ describe('live issue triage runner', () => {
       const labeled = () =>
         runIssueTriage({
           issueNumber: '42',
-          repo: 'arspesk/sur9e',
+          repo: 'apelabs-dev/sur9e',
           action: 'labeled',
           newestLabel: 'status:needs-info',
           bodyChanged: false,
@@ -72,7 +72,7 @@ describe('live issue triage runner', () => {
       const bodyEdit = () =>
         runIssueTriage({
           issueNumber: '42',
-          repo: 'arspesk/sur9e',
+          repo: 'apelabs-dev/sur9e',
           action: 'edited',
           newestLabel: null,
           bodyChanged: true,
@@ -116,7 +116,7 @@ describe('live issue triage runner', () => {
       const labeled = newestLabel =>
         runIssueTriage({
           issueNumber: '42',
-          repo: 'arspesk/sur9e',
+          repo: 'apelabs-dev/sur9e',
           action: 'labeled',
           newestLabel,
           bodyChanged: false,
@@ -153,7 +153,7 @@ describe('live issue triage runner', () => {
     await expect(
       runIssueTriage({
         issueNumber: '42',
-        repo: 'arspesk/sur9e',
+        repo: 'apelabs-dev/sur9e',
         action: 'labeled',
         newestLabel: 'area:web',
         bodyChanged: false,

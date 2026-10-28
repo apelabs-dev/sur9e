@@ -4,12 +4,12 @@ import { parseReleaseNotes } from '@/lib/release-notes';
 describe('parseReleaseNotes', () => {
   it('extracts feature bullets without compare URLs or commit-link markup', () => {
     const changelog = [
-      '## [0.4.0](https://github.com/arspesk/sur9e/compare/v0.3.2...v0.4.0) (2026-08-02)',
+      '## [0.4.0](https://github.com/apelabs-dev/sur9e/compare/v0.3.2...v0.4.0) (2026-08-02)',
       '',
       '### Features',
       '',
-      '* add guided status follow-ups ([e458cc4](https://github.com/arspesk/sur9e/commit/e458cc4))',
-      '* **status:** guide interview preparation ([6932308](https://github.com/arspesk/sur9e/commit/6932308))',
+      '* add guided status follow-ups ([e458cc4](https://github.com/apelabs-dev/sur9e/commit/e458cc4))',
+      '* **status:** guide interview preparation ([6932308](https://github.com/apelabs-dev/sur9e/commit/6932308))',
       '',
       '### Bug Fixes',
       '',
@@ -26,7 +26,7 @@ describe('parseReleaseNotes', () => {
     expect(
       parseReleaseNotes(
         '0.4.1',
-        '## [0.4.1](https://github.com/arspesk/sur9e/releases/tag/v0.4.1)\nSafer updates.',
+        '## [0.4.1](https://github.com/apelabs-dev/sur9e/releases/tag/v0.4.1)\nSafer updates.',
       ),
     ).toEqual({ title: 'v0.4.1', items: ['Safer updates.'] });
   });
