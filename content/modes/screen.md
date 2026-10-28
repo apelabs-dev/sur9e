@@ -88,7 +88,7 @@ Exact shape (omit unknown optional string fields; never invent a company or a sc
   "headline": "{sentence-case verdict headline, e.g. 'strong fit, comp clears, watch the YoE gap'}",
   "tldr": "{the 1-2 sentence verdict. Per the _shared Emphasis rule, bold the 1-3 decision-driving keywords/phrases wherever they sit (each a few words), never the whole sentence — e.g. 'Solutions Architect title is a **primary fit**, but the **10+ year requirement** vs 2-3 years is a **major blocker**; comp runs 60% above target.'}",
   "next_steps": "{the single most consequential action in ONE sentence, specific to this role. Bold the decisive keyword(s) — e.g. 'Run a full evaluation; **confirm the on-site requirement** before investing' or '**Skip** — comp is below your floor'}",
-  "strongest_signal": "{one sentence naming the single strongest positive signal. Bold the key phrase — e.g. 'Your Finturf role is an **exact archetype match** for the SE motion (demo to POC to onboarding)'}",
+  "strongest_signal": "{one sentence naming the single strongest positive signal. Bold the key phrase — e.g. 'Your Acme Lending role is an **exact archetype match** for the SE motion (demo to POC to onboarding)'}",
   "watch_out": "{one sentence naming the single biggest concern. Bold the key phrase — e.g. '**San Diego onsite** conflicts with your LA preference; healthcare domain preferred but not required'}"
 }
 ```

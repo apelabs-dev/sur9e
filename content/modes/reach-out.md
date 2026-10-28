@@ -47,7 +47,7 @@ The prompt body below is the strategic playbook. The "Output" section at the bot
 
    ### Hiring manager
    - **Sentence 1 (Hook)**: Specific observation about their work. A post they shared, a product decision, a customer outcome they're publicly proud of. Not the JD; the JD is what everyone sees.
-   - **Sentence 2 (Connection)**: A non-metric bridge to the candidate's own work, such as "I'm on the integrator side of those rails at Finturf" or "I've been wrestling with the same tradeoff in fintech". Show you understand the problem from your side, not your stats.
+   - **Sentence 2 (Connection)**: A non-metric bridge to the candidate's own work, such as "I'm on the integrator side of those rails at Acme Lending" or "I've been wrestling with the same tradeoff in fintech". Show you understand the problem from your side, not your stats.
    - **Sentence 3 (CTA)**: A real question, not a pitch. "Curious how your team is thinking about X" or "Would love to hear how POVs run on your side."
 
    ### Peer (referral)

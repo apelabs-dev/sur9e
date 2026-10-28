@@ -24,13 +24,13 @@ describe('normalizeApplyAnswers', () => {
     const legacy = {
       work_authorization_us: 'Yes',
       visa_sponsorship_required: 'No',
-      current_employer: 'Finturf',
+      current_employer: 'Acme Lending',
       additional_info: 'Gender / sex: Male\nDisability: No, I do not have a disability',
     };
     expect(normalizeApplyAnswers(legacy)).toEqual([
       { question: 'Work authorization (US)', answer: 'Yes' },
       { question: 'Require visa sponsorship?', answer: 'No' },
-      { question: 'Current employer', answer: 'Finturf' },
+      { question: 'Current employer', answer: 'Acme Lending' },
       { question: 'Gender / sex', answer: 'Male' },
       { question: 'Disability', answer: 'No, I do not have a disability' },
     ]);
