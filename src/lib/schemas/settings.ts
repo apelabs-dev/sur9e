@@ -130,7 +130,7 @@ export const ProvidersSettings = z.object({
 });
 
 export const SystemSettings = z.object({
-  update_source: z.string().default('https://github.com/arspesk/sur9e.git'),
+  update_source: z.string().default('https://github.com/apelabs-dev/sur9e.git'),
   update_branch: z.string().default('main'),
 });
 

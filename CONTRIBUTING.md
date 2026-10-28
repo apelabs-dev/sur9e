@@ -12,7 +12,7 @@ are the most valuable thing you can send.
 - If you use an AI coding agent, explicitly tell it to read this file before it
   implements, commits, pushes, or opens a PR. Humans and agents follow the same
   contribution workflow.
-- Check existing [GitHub Issues](https://github.com/arspesk/sur9e/issues)
+- Check existing [GitHub Issues](https://github.com/apelabs-dev/sur9e/issues)
   before opening a new one or starting a large change. For anything bigger
   than a bugfix, open an issue first so we can agree on the approach.
 - Follow the human-owned [issue triage policy](docs/triage.md) when reporting,
@@ -21,7 +21,7 @@ are the most valuable thing you can send.
 ## Dev setup
 
 ```bash
-git clone https://github.com/arspesk/sur9e
+git clone https://github.com/apelabs-dev/sur9e
 cd sur9e
 npm run setup        # guided wizard — deps, Playwright, Python venv, CLI + settings
 npm run doctor       # verifies your environment end to end

@@ -7,7 +7,7 @@
 # here — read scripts/setup.mjs to see what the wizard does.
 set -euo pipefail
 
-REPO="https://github.com/arspesk/sur9e"
+REPO="https://github.com/apelabs-dev/sur9e"
 DIR="sur9e"
 MIN_NODE_MAJOR=20
 

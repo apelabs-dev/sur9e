@@ -75,7 +75,7 @@ function Wrapper({ children }: { children: ReactNode }) {
   const methods = useForm<SettingsFormValues>({
     defaultValues: {
       system: {
-        update_source: 'https://github.com/arspesk/sur9e.git',
+        update_source: 'https://github.com/apelabs-dev/sur9e.git',
         update_branch: 'main',
       },
     } as SettingsFormValues,
@@ -240,15 +240,15 @@ describe('SystemSection update status', () => {
         local: '0.3.2',
         remote: '0.4.0',
         changelog: [
-          '## [0.4.0](https://github.com/arspesk/sur9e/compare/v0.3.2...v0.4.0) (2026-08-02)',
+          '## [0.4.0](https://github.com/apelabs-dev/sur9e/compare/v0.3.2...v0.4.0) (2026-08-02)',
           '',
           '### Features',
           '',
-          '* add guided status follow-ups ([e458cc4](https://github.com/arspesk/sur9e/commit/e458cc4))',
-          '* **status:** guide interview preparation ([6932308](https://github.com/arspesk/sur9e/commit/6932308))',
+          '* add guided status follow-ups ([e458cc4](https://github.com/apelabs-dev/sur9e/commit/e458cc4))',
+          '* **status:** guide interview preparation ([6932308](https://github.com/apelabs-dev/sur9e/commit/6932308))',
         ].join('\n'),
         releaseDate: '2026-08-02T12:00:00Z',
-        releaseUrl: 'https://github.com/arspesk/sur9e/releases/tag/v0.4.0',
+        releaseUrl: 'https://github.com/apelabs-dev/sur9e/releases/tag/v0.4.0',
       }),
     };
     renderSection();
@@ -262,7 +262,7 @@ describe('SystemSection update status', () => {
     expect(screen.queryByText(/e458cc4/)).toBeNull();
     expect(screen.getByRole('link', { name: 'View release notes' })).toHaveAttribute(
       'href',
-      'https://github.com/arspesk/sur9e/releases/tag/v0.4.0',
+      'https://github.com/apelabs-dev/sur9e/releases/tag/v0.4.0',
     );
   });
 
@@ -297,7 +297,7 @@ describe('SystemSection update status', () => {
   it('expands the existing RHF source fields from the compact summary', () => {
     renderSection();
 
-    expect(screen.getByText('https://github.com/arspesk/sur9e.git')).toBeTruthy();
+    expect(screen.getByText('https://github.com/apelabs-dev/sur9e.git')).toBeTruthy();
     expect(screen.getByText('main')).toBeTruthy();
     expect(screen.queryByLabelText('Update source')).toBeNull();
     expect(screen.queryByLabelText('Update branch')).toBeNull();
@@ -305,7 +305,7 @@ describe('SystemSection update status', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Edit update source' }));
 
     expect(screen.getByLabelText('Update source')).toHaveValue(
-      'https://github.com/arspesk/sur9e.git',
+      'https://github.com/apelabs-dev/sur9e.git',
     );
     expect(screen.getByLabelText('Update branch')).toHaveValue('main');
   });

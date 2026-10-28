@@ -12,7 +12,7 @@
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/arspesk/sur9e.git
+git clone https://github.com/apelabs-dev/sur9e.git
 cd sur9e
 npm run setup
 ```

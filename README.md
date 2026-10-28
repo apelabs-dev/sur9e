@@ -74,7 +74,7 @@ bash -c "$(curl -fsSL https://sur9e.com/install)"
 <summary><b>Prefer to run the steps yourself?</b></summary>
 
 ```bash
-git clone https://github.com/arspesk/sur9e
+git clone https://github.com/apelabs-dev/sur9e
 cd sur9e
 npm run setup        # guided wizard — deps, Playwright, Python venv, CLI + settings
 cp .env.example .env # optional — only to override the default port (3000)
@@ -248,7 +248,7 @@ Contributions welcome — human-written or AI-assisted. Read [`CONTRIBUTING.md`]
 - **Packaged app** — one-step install, no `git clone` needed
 - **In-app AI assistant** — chat with your pipeline directly inside the web UI
 
-Have an idea? The roadmap is community-driven — [open an issue](https://github.com/arspesk/sur9e/issues).
+Have an idea? The roadmap is community-driven — [open an issue](https://github.com/apelabs-dev/sur9e/issues).
 
 ## Disclaimer
 
@@ -262,7 +262,7 @@ The **sur9e name and logo are not covered by the MIT license.** They may not be 
 
 ## About the author
 
-Sur9e is built and maintained by **Arsenii Peskovatskov** ([arspesk](https://github.com/arspesk)) — I built it for my own job hunt and made it free and open so yours goes better too. Bug reports, feature ideas, and PRs are all welcome (start with [an issue](https://github.com/arspesk/sur9e/issues)); for anything else, reach out directly at **[hello@sur9e.com](mailto:hello@sur9e.com)**.
+Sur9e is built and maintained by **Arsenii Peskovatskov** ([arspesk](https://github.com/arspesk)) — I built it for my own job hunt and made it free and open so yours goes better too. Bug reports, feature ideas, and PRs are all welcome (start with [an issue](https://github.com/apelabs-dev/sur9e/issues)); for anything else, reach out directly at **[hello@sur9e.com](mailto:hello@sur9e.com)**.
 
 <a href="https://www.linkedin.com/in/arsenii-peskovatskov-757991217/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat"></a>
 <a href="mailto:hello@sur9e.com"><img alt="Email" src="https://img.shields.io/badge/hello@sur9e.com-EA4335?style=flat&logo=maildotru&logoColor=white"></a>

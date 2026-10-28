@@ -54,7 +54,7 @@
   "homepage": "https://sur9e.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arspesk/sur9e"
+    "url": "https://github.com/apelabs-dev/sur9e"
   },
   "license": "MIT",
   "dependencies": {

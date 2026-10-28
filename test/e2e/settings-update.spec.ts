@@ -8,15 +8,15 @@ const availableCheck = {
   local: '0.3.2',
   remote: '0.4.0',
   changelog: [
-    '## [0.4.0](https://github.com/arspesk/sur9e/compare/v0.3.2...v0.4.0) (2026-08-02)',
+    '## [0.4.0](https://github.com/apelabs-dev/sur9e/compare/v0.3.2...v0.4.0) (2026-08-02)',
     '',
     '### Features',
     '',
-    '* safer update recovery ([e458cc4](https://github.com/arspesk/sur9e/commit/e458cc4))',
-    '* readable release notes ([6932308](https://github.com/arspesk/sur9e/commit/6932308))',
+    '* safer update recovery ([e458cc4](https://github.com/apelabs-dev/sur9e/commit/e458cc4))',
+    '* readable release notes ([6932308](https://github.com/apelabs-dev/sur9e/commit/6932308))',
   ].join('\n'),
   releaseDate: '2026-08-02T12:00:00Z',
-  releaseUrl: 'https://github.com/arspesk/sur9e/releases/tag/v0.4.0',
+  releaseUrl: 'https://github.com/apelabs-dev/sur9e/releases/tag/v0.4.0',
 } as const;
 
 function job(phase: string) {

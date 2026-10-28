@@ -93,7 +93,7 @@ describe('UpdateCheckResponse', () => {
         remote: '0.4.0',
         changelog: 'Faster restart',
         releaseDate: '2026-08-02T12:00:00Z',
-        releaseUrl: 'https://github.com/arspesk/sur9e/releases/tag/v0.4.0',
+        releaseUrl: 'https://github.com/apelabs-dev/sur9e/releases/tag/v0.4.0',
       },
     ];
 

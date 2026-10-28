@@ -187,9 +187,9 @@ describe('triage documentation', () => {
     expect(docs).toMatch(/No .*Projects|no .*Projects/i);
     expect(docs).toMatch(/No reminder bot|no reminder bot/i);
     expect(docs).toContain('Activation');
-    expect(docs).toContain('npm run github:labels -- --repo arspesk/sur9e');
-    expect(docs).toContain('npm run github:labels -- --repo arspesk/sur9e --apply');
-    expect(docs).toContain('gh label list --repo arspesk/sur9e');
+    expect(docs).toContain('npm run github:labels -- --repo apelabs-dev/sur9e');
+    expect(docs).toContain('npm run github:labels -- --repo apelabs-dev/sur9e --apply');
+    expect(docs).toContain('gh label list --repo apelabs-dev/sur9e');
     expect(docs).toContain('all 21 label names');
     expect(docs).toMatch(/inactive.*human-gated|human-gated.*inactive/i);
   });
