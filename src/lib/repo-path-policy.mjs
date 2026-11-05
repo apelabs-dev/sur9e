@@ -15,7 +15,6 @@ export const SYSTEM_PATHS = Object.freeze([
   'CLAUDE.md',
   'AGENTS.md',
   '.github/',
-  '.coderabbit.yaml',
   'package.json',
   'package-lock.json',
   'CHANGELOG.md',

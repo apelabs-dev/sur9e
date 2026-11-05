@@ -78,11 +78,12 @@ From this branch, a maintainer must:
 
 ## Automation boundaries
 
-CodeRabbit is an advisory, free-for-OSS helper. On issue creation or edit it
-may enrich descriptions and assign exactly one type, primary area, and priority
-when evidence supports them. It may apply `status:needs-info` only when details
-are materially missing. It does not accept, decline, resolve, close, or make
-comments that imply those maintainer-only decisions.
+Pull request reviews and issue triage are handled by the Hermes gh-sync integration
+(the `apelabs-hermes` GitHub App). On issue creation or edit it may comment with a
+description enrichment and suggest exactly one type, primary area, and priority when
+evidence supports them. It may apply `status:needs-info` only when details are
+materially missing. It only comments: it never approves or requests changes, and it
+does not accept, decline, resolve, or close an issue.
 
 The issue-label workflow only resolves conflicting prefixed labels by keeping
 the newest label in its category, and it returns a needs-info report to the

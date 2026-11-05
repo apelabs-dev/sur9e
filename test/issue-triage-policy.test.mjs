@@ -111,43 +111,6 @@ describe('issue triage automation policy', () => {
     ]);
   });
 
-  it('keeps CodeRabbit advisory and constrains it to triage-only issue enrichment', () => {
-    const config = loadYaml(resolve(ROOT, '.coderabbit.yaml'));
-    expect(config.reviews.auto_review).toMatchObject({ enabled: true, drafts: false });
-    expect(config.chat).toEqual({ auto_reply: false, allow_non_org_members: false });
-    expect(config.issue_enrichment).toMatchObject({
-      auto_enrich: { enabled: true },
-      labeling: { auto_apply_labels: true },
-      planning: { enabled: false, auto_planning: { enabled: false } },
-    });
-
-    const instructions = config.issue_enrichment.labeling.labeling_instructions;
-    const allowedLabels = [
-      ...taxonomy.type,
-      ...taxonomy.area,
-      ...taxonomy.priority,
-      'status:needs-info',
-    ];
-    expect(instructions).toHaveLength(allowedLabels.length);
-    expect(instructions.map(entry => entry.label)).toEqual(allowedLabels);
-    expect(instructions.every(entry => typeof entry.instructions === 'string')).toBe(true);
-
-    const guidance = instructions.map(entry => entry.instructions).join(' ');
-    expect(guidance).toContain('exactly one type');
-    expect(guidance).toContain('exactly one primary area');
-    expect(guidance).toContain('exactly one priority');
-    expect(guidance).toContain('status:needs-info');
-    for (const forbidden of [
-      'must not apply status:accepted',
-      'must not apply status:declined',
-      'must not apply any resolution:',
-      'must not make acceptance',
-      'must not make closure',
-    ]) {
-      expect(guidance).toContain(forbidden);
-    }
-  });
-
   it('uses a least-privilege issue-only workflow with no unsafe template interpolation', () => {
     const path = resolve(ROOT, '.github/workflows/issue-triage.yml');
     const source = readFileSync(path, 'utf8');
@@ -178,7 +141,6 @@ describe('triage documentation', () => {
     expect(contributing).toContain('docs/triage.md');
     expect(docs).toContain('is:issue is:open label:"status:needs-triage" sort:created-asc');
     expect(docs).toContain('7 days');
-    expect(docs).toContain('CodeRabbit');
     expect(docs).toContain('Editing the issue body');
     expect(docs).toMatch(/no Codex delegation/i);
     expect(docs).toMatch(/no Claude delegation/i);

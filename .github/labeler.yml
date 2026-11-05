@@ -66,6 +66,5 @@ ci:
   - changed-files:
       - any-glob-to-any-file:
           - ".github/**"
-          - ".coderabbit*"
           - ".release-please-manifest.json"
           - "release-please-config.json"

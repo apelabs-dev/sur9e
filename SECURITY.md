@@ -40,8 +40,9 @@ Sur9e is a **single-user, local-first** application:
   update PRs. Repository alerts and security updates still require the
   maintainer to enable the corresponding GitHub settings; Dependabot PRs are
   never auto-merged.
-- If the CodeRabbit App is installed, its feedback is advisory for merge gating
-  and is not a security control.
+- The Hermes gh-sync integration (the `apelabs-hermes` GitHub App) comments on pull
+  requests and issues. Its feedback is advisory for merge gating and is not a security
+  control.
 
 ## Reporting a Vulnerability
 

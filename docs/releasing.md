@@ -98,13 +98,9 @@ this repo. Do not assume any of them are active until a maintainer verifies them
 3. Create the labels used by `.github/labeler.yml`: `ui`, `server`,
    `agent-behavior`, `modes`, `scripts`, `tests`, `documentation`,
    `dependencies`, and `ci`.
-4. If installing the CodeRabbit GitHub App, grant it access to this selected
-   repository only. Review its requested read/write access to repository
-   code/contents, commit statuses, issues, and pull requests before approval.
-   Its findings remain actionable, but keep it advisory for merge gating and
-   not a required check. Retain disabled automatic replies and
-   non-organization-member chat. During rollout, prohibit Autofix, direct
-   commits, stacked PRs, and code-editing chat commands.
+4. Install the Hermes gh-sync GitHub App (`apelabs-hermes`) on this selected repository
+   only. It reviews pull requests and triages issues with comment-only output, so keep it
+   advisory for merge gating and never a required check.
 5. Enable GitHub's Dependency Graph, Dependabot alerts, and Dependabot security
    updates. The tracked Dependabot configuration opens version-update PRs, but
    repository security settings are still remote prerequisites.
@@ -112,5 +108,5 @@ this repo. Do not assume any of them are active until a maintainer verifies them
    checks. Candidate project checks are **Quick quality gate**, **Production
    build**, **Fresh-clone Playwright smoke**, **No private user data**,
    **Validate PR title**, **High-severity dependency gate**, and **CodeQL
-   analysis**. Keep CodeRabbit advisory and never enable automatic dependency
+   analysis**. Keep automated review advisory and never enable automatic dependency
    merging.
