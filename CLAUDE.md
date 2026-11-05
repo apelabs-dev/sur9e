@@ -110,13 +110,11 @@ The full gate (`test-all.mjs`) covers syntax, scripts, data-contract invariants,
 
 PR automation also runs a fresh-clone, data-independent Playwright smoke subset;
 the user-data boundary; PR title and path-label policy; high-severity dependency
-review; and CodeQL. External actions stay pinned to full commit SHAs. CodeRabbit
-is conditional on its GitHub App being installed. If installed, it reviews
-non-draft PRs to `main`; its findings remain actionable, but it is advisory for
-merge gating and not a required check. Its request-changes workflow and
-automatic/non-member chat stay disabled. During rollout, prohibit Autofix,
-direct commits, stacked PRs, and code-editing chat commands. Dependabot opens
-weekly npm and GitHub Actions PRs; never auto-merge them. See
+review; and CodeQL. External actions stay pinned to full commit SHAs. Pull request
+reviews and issue triage are handled by the Hermes gh-sync integration (the
+`apelabs-hermes` GitHub App), which comments only: its findings are advisory and
+never a merge gate or a required check. Dependabot opens weekly npm and GitHub
+Actions PRs; never auto-merge them. See
 [`docs/releasing.md`](docs/releasing.md) for the maintainer workflow.
 
 **Bypass for genuine emergencies:** `git commit --no-verify` for the pre-commit hook, `CLAUDE_SKIP_HOOK=1` for the PostToolUse hook. Use sparingly.
@@ -153,7 +151,7 @@ decisions, split examples, commit style, and review expectations.
    changes also require the three screenshot widths in Critical rules.
 3. **Open a reviewable PR.** Push only when explicitly asked. Use a valid
    Conventional Commit PR title, review the complete diff, and resolve
-   actionable human or CodeRabbit findings. CodeRabbit is advisory. Review
+   actionable human or automated findings. Automated review findings are advisory. Review
    Dependabot PRs individually for compatibility and provenance; never
    auto-merge them.
 4. **Wait for the protected checks.** Required checks are **Quick quality

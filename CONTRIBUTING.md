@@ -53,13 +53,11 @@ against a fresh clone. That smoke suite deliberately avoids private fixtures;
 run relevant data-dependent browser coverage locally. External GitHub Actions
 stay pinned to full commit SHAs.
 
-CodeRabbit runs only if its GitHub App has been installed. If installed, it
-auto-reviews non-draft PRs to `main`; its findings remain actionable, but it is
-advisory for merge gating and not a required check. Its request-changes workflow
-and automatic/non-member chat stay disabled. During rollout it must not use
-Autofix, create direct commits or stacked PRs, or accept code-editing chat
-commands. Dependabot opens weekly npm and GitHub Actions update PRs; those PRs
-are never auto-merged.
+Pull request reviews and issue triage are handled by the Hermes gh-sync integration
+(the `apelabs-hermes` GitHub App). It only comments — it never requests changes or
+approves — so its findings remain actionable but are advisory for merge gating and
+are never a required check. Dependabot opens weekly npm and GitHub Actions update
+PRs; those PRs are never auto-merged.
 
 A PR that fails an applicable gate will not be merged. New behavior needs tests.
 Behavior-preserving refactors must leave existing tests passing unmodified.
