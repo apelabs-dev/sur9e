@@ -3,12 +3,15 @@ name: User data boundary
 on:
   pull_request:
     branches: [main]
+  push:
+    branches: ["ci/**"]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -29,4 +32,10 @@ jobs:
           node-version: 24
 
       - name: Check user-data boundary
+        if: ${{ github.event_name == 'pull_request' }}
         run: node src/lib/check-user-data-boundary.mjs
+
+      # ci/** pushes and manual runs have no PR base/head, so scan every tracked file.
+      - name: Check user-data boundary (all tracked files)
+        if: ${{ github.event_name != 'pull_request' }}
+        run: node src/lib/check-user-data-boundary.mjs --tracked

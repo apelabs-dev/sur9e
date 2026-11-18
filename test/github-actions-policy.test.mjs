@@ -446,10 +446,11 @@ describe('core CI workflow', () => {
     expect(workflow.name, `${displayPath(path)}:1 must be named CI`).toBe('CI');
     expect(
       workflowTriggers(workflow),
-      `${displayPath(path)}:3 must run only for main pull requests and pushes`,
+      `${displayPath(path)}:3 must run only for main pull requests, main and ci/** pushes, and manual dispatch`,
     ).toEqual({
       pull_request: { branches: ['main'] },
-      push: { branches: ['main'] },
+      push: { branches: ['main', 'ci/**'] },
+      workflow_dispatch: null,
     });
     expect(
       workflow.permissions,
