@@ -36,7 +36,8 @@ You don't need real personal data to develop — copy the templates from
 The feedback layers have deliberately different scopes: AI-agent edits get a
 fast Biome/Prettier check, pre-commit runs `npm run test:quick`, and core CI uses
 Node 24 + `npm ci` before running the quick gate and a production build as
-separate jobs.
+separate jobs. Pushes to `ci/**` branches and manual
+`workflow_dispatch` runs also trigger CI.
 
 ```bash
 npm run lint         # Biome (TS/JS/CSS/JSON) + Prettier (MD/YAML)

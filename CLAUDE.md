@@ -87,7 +87,7 @@ Dev server: `npm run web` → http://localhost:3000
 
 ## Critical rules (always)
 
-- **NEVER auto-push.** Force push, branch deletion, and `git push` to remote require an explicit ask. Local commits are fine — make them logically grouped and well-described.
+- **NEVER auto-push.** Force push, branch deletion, and `git push` to remote require an explicit ask. Local commits are fine — make them logically grouped and well-described. Exception: agents may push, force-push and delete their own throwaway `ci/<name>` branches without asking, to run CI on GitHub instead of the local machine. Never `main`, never a PR's head branch. Snapshot commits only; nothing private in them. Delete the branch when the run is read.
 - **NEVER auto-submit applications.** Fill forms, draft answers, generate PDFs — but always STOP before Submit/Send/Apply.
 - **Offer verification = Playwright, not WebFetch.** WebFetch can be spoofed by stale caches and bot-detection redirects; only Playwright (real headless browser) gives a faithful read of the live page.
 - **Don't edit `content/modes/_shared.md` for user-specific content.** Customizations go in `inputs/personalization/narrative.md` or `inputs/personalization/profile.yml`. See [`docs/data-contract.md`](docs/data-contract.md).

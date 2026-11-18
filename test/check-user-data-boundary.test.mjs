@@ -541,10 +541,14 @@ describe('user-data boundary', () => {
 
     expect(workflow).toMatchObject({
       name: 'User data boundary',
-      on: { pull_request: { branches: ['main'] } },
+      on: {
+        pull_request: { branches: ['main'] },
+        push: { branches: ['ci/**'] },
+        workflow_dispatch: null,
+      },
       permissions: { contents: 'read' },
       concurrency: {
-        group: '${{ github.workflow }}-${{ github.event.pull_request.number }}',
+        group: '${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}',
         'cancel-in-progress': true,
       },
     });
@@ -568,7 +572,13 @@ describe('user-data boundary', () => {
       },
       {
         name: 'Check user-data boundary',
+        if: "${{ github.event_name == 'pull_request' }}",
         run: 'node src/lib/check-user-data-boundary.mjs',
+      },
+      {
+        name: 'Check user-data boundary (all tracked files)',
+        if: "${{ github.event_name != 'pull_request' }}",
+        run: 'node src/lib/check-user-data-boundary.mjs --tracked',
       },
     ]);
     expect(source).not.toContain('scripts/check-user-data-boundary.mjs');
